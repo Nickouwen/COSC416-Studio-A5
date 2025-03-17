@@ -5,9 +5,17 @@ public class PaddleController : MonoBehaviour
     [SerializeField] private float moveSpeed;
     [SerializeField] private float minBallBounceBackSpeed;
     [SerializeField] private float maxBallBounceBackSpeed;
+    public GameObject explosionParticle;
 
     private Rigidbody rb;
-
+    // To handle ball particle effect
+    public void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject.CompareTag("Ball"))
+        {
+            Instantiate(explosionParticle, collision.transform.position, collision.transform.rotation);
+        }
+    }
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
