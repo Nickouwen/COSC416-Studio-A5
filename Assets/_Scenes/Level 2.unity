@@ -832,6 +832,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 809835417121010773, guid: a6b19c919c45ec24c982db98308cb5b7, type: 3}
   m_PrefabInstance: {fileID: 660837052}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &763696025 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5782655882605354209, guid: c3f7c1c64881e4d58b6a4d2350456574, type: 3}
+  m_PrefabInstance: {fileID: 1597766195}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &778152538
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -902,6 +907,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5168557808664283564, guid: 2aa3a5c8938324a02a8bd96a8a29c2c3, type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5560097220404083826, guid: 2aa3a5c8938324a02a8bd96a8a29c2c3, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -2274,6 +2283,67 @@ MonoBehaviour:
   ball: {fileID: 4561635119993004754}
   bricksContainer: {fileID: 796630123}
   explosionParticle: {fileID: 787007728}
+--- !u!1001 &1597766195
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3574549151964509624, guid: c3f7c1c64881e4d58b6a4d2350456574, type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5731769391364039891, guid: c3f7c1c64881e4d58b6a4d2350456574, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5731769391364039891, guid: c3f7c1c64881e4d58b6a4d2350456574, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5731769391364039891, guid: c3f7c1c64881e4d58b6a4d2350456574, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5731769391364039891, guid: c3f7c1c64881e4d58b6a4d2350456574, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5731769391364039891, guid: c3f7c1c64881e4d58b6a4d2350456574, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5731769391364039891, guid: c3f7c1c64881e4d58b6a4d2350456574, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5731769391364039891, guid: c3f7c1c64881e4d58b6a4d2350456574, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5731769391364039891, guid: c3f7c1c64881e4d58b6a4d2350456574, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5731769391364039891, guid: c3f7c1c64881e4d58b6a4d2350456574, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5731769391364039891, guid: c3f7c1c64881e4d58b6a4d2350456574, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5782655882605354209, guid: c3f7c1c64881e4d58b6a4d2350456574, type: 3}
+      propertyPath: m_Name
+      value: VFX_paddle
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c3f7c1c64881e4d58b6a4d2350456574, type: 3}
 --- !u!1001 &1708692028
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2472,6 +2542,10 @@ PrefabInstance:
       propertyPath: ball
       value: 
       objectReference: {fileID: 308265316}
+    - target: {fileID: 6455849453923345546, guid: 329927099c3f0824b9a9bd04beac8c6d, type: 3}
+      propertyPath: explosionParticle
+      value: 
+      objectReference: {fileID: 763696025}
     - target: {fileID: 8509313780869582024, guid: 329927099c3f0824b9a9bd04beac8c6d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -2604,3 +2678,4 @@ SceneRoots:
   - {fileID: 1576275138}
   - {fileID: 1715049655}
   - {fileID: 787007727}
+  - {fileID: 1597766195}
