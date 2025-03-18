@@ -33,6 +33,7 @@ public class GameManager : SingletonMonoBehavior<GameManager>
         {
             AudioManager.instance.PlaySFX(AudioManager.instance.impactBrickClip);
             AudioManager.instance.sfxSource.pitch += 0.1f;
+            ball.hasHitPaddle = false;
         }
         // implement particle effect here
         // add camera shake here

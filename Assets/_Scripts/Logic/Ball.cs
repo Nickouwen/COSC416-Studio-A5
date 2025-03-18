@@ -12,7 +12,7 @@ public class Ball : MonoBehaviour
 
     [SerializeField] private float defaultAudioPitch = 1f;
     private bool isBallActive;
-    private bool hasHitPaddle = false;
+    public bool hasHitPaddle = false;
 
     private void OnCollisionEnter(Collision other)
     {
@@ -36,6 +36,7 @@ public class Ball : MonoBehaviour
             if (AudioManager.instance != null) 
             {
                 AudioManager.instance.PlaySFX(AudioManager.instance.impactWallClip);
+                hasHitPaddle = false;
             }
         }
     }
