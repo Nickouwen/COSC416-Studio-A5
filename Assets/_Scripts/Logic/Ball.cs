@@ -10,18 +10,33 @@ public class Ball : MonoBehaviour
     [SerializeField] private Transform ballAnchor;
     [SerializeField] private Rigidbody rb;
 
+    [SerializeField] private float defaultAudioPitch = 1f;
     private bool isBallActive;
+    private bool hasHitPaddle = false;
 
     private void OnCollisionEnter(Collision other)
     {
         if(other.gameObject.CompareTag("Paddle"))
         {
+            if (AudioManager.instance != null && !hasHitPaddle) 
+            {
+                AudioManager.instance.PlaySFX(AudioManager.instance.impactPaddleClip);
+                AudioManager.instance.sfxSource.pitch = defaultAudioPitch;
+                hasHitPaddle = true;
+            }
             Vector3 directionToFire = (transform.position - other.transform.position).normalized;
             float angleOfContact = Vector3.Angle(transform.forward, directionToFire);
             float returnSpeed = Mathf.Lerp(minBallBounceBackSpeed, maxBallBounceBackSpeed, angleOfContact / 90f);
             rb.linearVelocity = Vector3.zero;
             rb.angularVelocity = Vector3.zero;
             rb.AddForce(directionToFire * returnSpeed, ForceMode.Impulse);
+        }
+        else if(other.gameObject.CompareTag("Environment"))
+        {
+            if (AudioManager.instance != null) 
+            {
+                AudioManager.instance.PlaySFX(AudioManager.instance.impactWallClip);
+            }
         }
     }
 

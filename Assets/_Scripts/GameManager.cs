@@ -29,7 +29,11 @@ public class GameManager : SingletonMonoBehavior<GameManager>
 
     public void OnBrickDestroyed(Vector3 position)
     {
-        // fire audio here
+        if (AudioManager.instance != null)
+        {
+            AudioManager.instance.PlaySFX(AudioManager.instance.impactBrickClip);
+            AudioManager.instance.sfxSource.pitch += 0.1f;
+        }
         // implement particle effect here
         // add camera shake here
         currentBrickCount--;
